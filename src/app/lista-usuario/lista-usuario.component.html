@@ -1,0 +1,29 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Lista de Usuários</h2>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Nome: </th>
+          <th>Idade: </th>
+          <th>Data de nascimento: </th>
+          <th>CPF: </th>
+          <th>Sexo: </th>
+          <th>Pais: </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let i of usuarios | async">
+          <td>{{i.nomeCompleto}}</td>
+          <td>{{i.idade}}</td>
+          <td>{{i.dataNascimento}}</td>
+          <td>{{i.cpf}}</td>
+          <td>{{i.sexo}}</td>
+          <td>{{i.nacionalidade}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

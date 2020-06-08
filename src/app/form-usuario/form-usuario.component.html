@@ -1,0 +1,34 @@
+<form [formGroup]="form" >
+    <div class="form-group">
+    <label for="name">Nome: </label>
+      <input type="text" class="form-control" id="nome" formControlName="nome" name="nome" placeholder="Digite seu nome">
+    </div>
+
+    <div class="form-group">
+    <label for="name">Idade: </label>
+      <input type="number" class="form-control" id="idade" formControlName="idade" name="idade" placeholder="Digite sua idade">
+
+    </div>
+
+    <div class="form-group">
+      <label for="name">Data de nascimento: </label>
+      <input type="text" class="form-control" id="dataNascimento" formControlName="dataNascimento" name="dataNascimento" placeholder="Digite sua data de nascimento">
+    </div>
+
+    <div class="form-group">
+      <label for="name">CPF: </label>
+      <input type="text" class="form-control" id="cpf" formControlName="cpf" name="cpf" placeholder="Digite seu CPF">
+    </div>
+
+    <div class="d-inline-block" id="sexo">
+      <select [(ngModel)]= "usuario.sexo" [ngModelOptions]="{standalone: true}">
+          <option *ngFor="let sexo of sexos" [ngValue]="sexo.valor">{{sexo.valor}}</option>
+      </select>
+    </div>
+
+    <div class="d-inline-block" id="nacionalidade">
+        <select [(ngModel)]= "usuario.nacionalidade" [ngModelOptions]="{standalone: true}">
+            <option *ngFor="let nacionalidade of nacionalidades"  [ngValue]="nacionalidade.valor">{{nacionalidade.valor}}</option>
+        </select>
+    </div>
+  </form>

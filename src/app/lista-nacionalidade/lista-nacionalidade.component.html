@@ -1,0 +1,19 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Lista de Nacionalidades</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Nacionalidades: </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let i of usuarios | async">
+            <td>{{i.nacionalidade}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

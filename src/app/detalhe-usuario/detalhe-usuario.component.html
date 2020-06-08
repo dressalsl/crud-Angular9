@@ -1,0 +1,27 @@
+<h2>Detalhamento de Usuário</h2>
+
+<hr/>
+<div *ngIf="usuario">
+  <div>
+    <label><b>Nome: </b></label> {{usuario.nomeCompleto}}
+  </div>
+  <div>
+    <label><b>Idade: </b></label> {{usuario.idade}}
+  </div>
+  <div>
+    <label><b>Data de Nascimento: </b></label> {{usuario.dataNascimento}}
+  </div>
+  <div>
+    <label><b>CPF: </b></label> {{usuario.cpf}}
+  </div>
+  <div>
+    <label><b>Sexo: </b></label> {{usuario.sexo}}
+  </div>
+  <div>
+    <label><b>Nacionalidade: </b></label> {{usuario.nacionalidade}}
+  </div>
+</div>
+
+<br>
+<br>
+<button (click)="listar()" class="btn btn-primary">Voltar para lista de Usuário</button><br>
